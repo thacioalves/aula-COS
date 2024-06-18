@@ -4,3 +4,24 @@
     build:
       context: .
       dockerfile: Dockerfile
+
+  db:
+    image: mysql:8.0
+    container_name: meu-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: senha_root
+      MYSQL_DATABASE: meu_banco
+      MYSQL_USER: usuario
+      MYSQL_PASSWORD: senha_usuario
+    ports:
+      - "3306:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - db_network
+
+volumes:
+  db_data:
+
+networks:
+  db_network:
