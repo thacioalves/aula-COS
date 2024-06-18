@@ -1,0 +1,6 @@
+﻿services:
+  aula-cos:
+    image: aula-cos
+    build:
+      context: .
+      dockerfile: Dockerfile
