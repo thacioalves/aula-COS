@@ -1,0 +1,6 @@
+@aula_COS_HostAddress = http://localhost:5150
+
+GET {{aula_COS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
